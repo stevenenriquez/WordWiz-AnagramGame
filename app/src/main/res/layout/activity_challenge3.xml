@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    tools:context=".Challenge3">
+
+    <TextView
+        android:id="@+id/Chal3_title"
+        android:layout_width="282dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="casual"
+        android:text="@string/ch3_results"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Chal3_textView"
+        android:layout_width="261dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="#d8d8d8"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_title" />
+
+    <Button
+        android:id="@+id/Chal3_L2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/letter_e"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_L5"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_L3"
+        app:layout_constraintStart_toEndOf="@+id/Chal3_L1"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_textView" />
+
+    <Button
+        android:id="@+id/Chal3_L6"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/letter_c"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Chal3_L5"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_L3" />
+
+    <Button
+        android:id="@+id/Chal3_L3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/letter_f"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_L6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Chal3_L2"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_textView" />
+
+    <Button
+        android:id="@+id/Chal3_L4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/letter_d"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_L5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_L1" />
+
+    <Button
+        android:id="@+id/Chal3_L5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/letter_a"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_L6"
+        app:layout_constraintStart_toEndOf="@+id/Chal3_L4"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_L2" />
+
+    <Button
+        android:id="@+id/Chal3_L1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/letter_a"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_L4"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_L2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chal3_textView" />
+
+    <Button
+        android:id="@+id/Chal3_submitBtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="1dp"
+        android:fontFamily="casual"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_prevBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Chal3_clearBtn" />
+
+    <Button
+        android:id="@+id/Chal3_clearBtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="76dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="72dp"
+        android:fontFamily="casual"
+        android:text="@string/clear"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_submitBtn"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Chal3_prevBtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="casual"
+        android:text="@string/prev"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Chal3_listBtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="casual"
+        android:text="@string/list"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Chal3_prevBtn"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Answer_textView"
+        android:layout_width="162dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/Chal3_L2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">AnagramGame</string>
+    <string name="main_title">Word Wiz</string>
+    <string name="main_play">Play</string>
+    <string name="results">Results</string>
+    <string name="credits">Credits</string>
+    <string name="ch_list">Challenges</string>
+    <string name="ch_1">Challenge 1: Easy</string>
+    <string name="ch_2">Challenge 2: Medium</string>
+    <string name="ch_3">Challenge 3: Hard</string>
+    <string name="main_menu">Main Menu</string>
+
+    <string name="correct_answer">Correct!</string>
+
+    //results
+    <string name="ch1_results">Challenge 1</string>
+    <string name="ch2_results">Challenge 2</string>
+    <string name="ch3_results">Challenge 3</string>
+    <string name="completed">Completed</string>
+    <string name="in_progress">In Progress</string>
+    <string name="not_attempted">Not Attempted</string>
+    <string name="credits_text">Thank you for playing my game!\n\nCreator:\nSteven Enriquez</string>
+
+    //challenges
+    <string name="submit">Submit</string>
+    <string name="back">Back</string>
+    <string name="clear">Clear</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="list">List</string>
+
+    //letters
+    <string name="letter_a">A</string>
+    <string name="letter_p">P</string>
+    <string name="letter_l">L</string>
+    <string name="letter_e">E</string>
+    <string name="letter_s">S</string>
+    <string name="letter_f">F</string>
+    <string name="letter_c">C</string>
+    <string name="letter_d">D</string>
+    <string name="letter_g">G</string>
+    <string name="letter_x">X</string>
+    <string name="letter_y">Y</string>
+
+
+
+
+</resources>
