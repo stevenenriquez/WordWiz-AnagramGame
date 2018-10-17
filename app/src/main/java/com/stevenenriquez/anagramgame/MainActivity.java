@@ -1,3 +1,8 @@
+/*
+File: MainActivity.java
+Author: Steven Enriquez
+*/
+
 package com.stevenenriquez.anagramgame;
 
 import android.content.Intent;
@@ -31,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
         muteButton = findViewById(R.id.muteButton);
         creditsButton = findViewById(R.id.creditsButton);
 
+        // creates media players for music/button click sounds
         mainMusicPlayer = MediaPlayer.create(this, R.raw.bgmusic);
         buttonSoundPlayer = MediaPlayer.create(this, R.raw.btnpress);
+        // loops background music
         mainMusicPlayer.setLooping(true);
         mainMusicPlayer.start();
-
+        // calls function to open activity
         playButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 openChallengeListActivity();
             }
         });
-
+        // calls function to open activity
         resultsButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -64,17 +71,19 @@ public class MainActivity extends AppCompatActivity {
                 buttonSoundPlayer.start();
                 if(!muteFlag)
                 {
+                    // mutes background music
                     mainMusicPlayer.setVolume(0,0);
                     muteFlag = true;
                 }
                 else
                 {
+                    // un-mutes background music
                     mainMusicPlayer.setVolume(0,1);
                     muteFlag = false;
                 }
             }
         });
-
+        // opens activity
         creditsButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -85,24 +94,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    // do nothing on back press
+    public void onBackPressed()
+    {
 
-    public void onBackPressed() {
-        // do nothing on back press
     }
-
+    // opens activity
     public void openCreditsActivity()
     {
         mainMusicPlayer.release();
         Intent intent = new Intent(this, Credits.class);
         startActivity(intent);
     }
-
+    // opens activity
     public void openChallengeListActivity()
     {
         Intent intent = new Intent(this, ChallengeList.class);
         startActivity(intent);
     }
-
+    // opens activity
     public void openResultsActivity()
     {
         Intent intent = new Intent(this, Results.class);

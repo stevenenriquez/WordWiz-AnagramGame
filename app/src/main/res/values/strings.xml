@@ -1,21 +1,18 @@
 <resources>
-    <string name="app_name">AnagramGame</string>
+
+    //titles
+    <string name="app_name">Word Wiz</string>
     <string name="main_title">Word Wiz</string>
     <string name="main_play">Play</string>
     <string name="results">Results</string>
     <string name="credits">Credits</string>
     <string name="ch_list">Challenges</string>
-    <string name="ch_1">Challenge 1: Easy</string>
-    <string name="ch_2">Challenge 2: Medium</string>
-    <string name="ch_3">Challenge 3: Hard</string>
     <string name="main_menu">Main Menu</string>
 
-    <string name="correct_answer">Correct!</string>
-
     //results
-    <string name="ch1_results">Challenge 1</string>
-    <string name="ch2_results">Challenge 2</string>
-    <string name="ch3_results">Challenge 3</string>
+    <string name="ch1_results">Challenge 1 of 3</string>
+    <string name="ch2_results">Challenge 2 of 3</string>
+    <string name="ch3_results">Challenge 3 of 3</string>
     <string name="completed">Completed</string>
     <string name="in_progress">In Progress</string>
     <string name="not_attempted">Not Attempted</string>
@@ -26,8 +23,14 @@
     <string name="back">Back</string>
     <string name="clear">Clear</string>
     <string name="next">Next</string>
+    <string name="skip">Skip</string>
     <string name="prev">Prev</string>
     <string name="list">List</string>
+    <string name="stop">Stop</string>
+    <string name="ch_1">Easy</string>
+    <string name="ch_2">Medium</string>
+    <string name="ch_3">Hard</string>
+    <string name="correct_answer">Correct!</string>
 
     //letters
     <string name="letter_a">A</string>
@@ -41,8 +44,5 @@
     <string name="letter_g">G</string>
     <string name="letter_x">X</string>
     <string name="letter_y">Y</string>
-
-
-
 
 </resources>

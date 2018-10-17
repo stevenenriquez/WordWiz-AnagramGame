@@ -1,6 +1,12 @@
+/*
+File: Challenge3.java
+Author: Steven Enriquez
+*/
+
 package com.stevenenriquez.anagramgame;
 
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +17,14 @@ public class Challenge3 extends AppCompatActivity {
 
     Button L1, L2, L3, L4, L5, L6, clearBtn, submitBtn, prevBtn, listBtn;
 
-    TextView Chal3_textView, Answer_textView;
+    TextView Chal3_textView, Answer_textView, timer_textView;
 
     Boolean L1UsedFlag = false, L2UsedFlag = false, L3UsedFlag = false,
             L4UsedFlag = false, L5UsedFlag = false, L6UsedFlag = false;
 
     String Chal3_Answer = "FACADE";
 
-    Boolean CompletedFlag = false;
+    public static Boolean Chal3CompletedFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,16 @@ public class Challenge3 extends AppCompatActivity {
         listBtn = findViewById(R.id.Chal3_listBtn);
         Chal3_textView = findViewById(R.id.Chal3_textView);
         Answer_textView = findViewById(R.id.Answer_textView);
+        timer_textView = findViewById(R.id.timer_textView);
+
+        // timer will run for 5 minutes
+        CountingUpTimer timer = new CountingUpTimer(300000) {
+            public void onTick(int second) {
+                timer_textView.setText("Time: " + String.valueOf(second));
+            }
+        };
+        // start the timer
+        timer.start();
 
         L1.setOnClickListener(new View.OnClickListener()
         {
@@ -145,13 +161,15 @@ public class Challenge3 extends AppCompatActivity {
                 String incorrect = "Incorrect!";
                 if(tempString.equals(Chal3_Answer))
                 {
-                    CompletedFlag = true;
+                    Chal3CompletedFlag = true;
                     Answer_textView.setText(correct);
+                    openResultsActivity();
                 }
                 else
                 {
                     Chal3_textView.setText("");
                     Answer_textView.setText(incorrect);
+                    // sets all the letters to an unused state
                     L1UsedFlag = false;
                     L2UsedFlag = false;
                     L3UsedFlag = false;
@@ -170,6 +188,7 @@ public class Challenge3 extends AppCompatActivity {
                 MainActivity.buttonSoundPlayer.start();
                 Chal3_textView.setText("");
                 Answer_textView.setText("");
+                // sets all the letters to an unused state
                 L1UsedFlag = false;
                 L2UsedFlag = false;
                 L3UsedFlag = false;
@@ -199,16 +218,51 @@ public class Challenge3 extends AppCompatActivity {
             }
         });
     }
-
+    // opens activity
     public void openPrevActivity()
     {
         Intent intent = new Intent(this, Challenge2.class);
         startActivity(intent);
     }
-
+    // opens activity
     public void openChallengeListActivity()
     {
         Intent intent = new Intent(this, ChallengeList.class);
         startActivity(intent);
+    }
+    // opens activity
+    public void openResultsActivity()
+    {
+        Intent intent = new Intent(this, Results.class);
+        startActivity(intent);
+    }
+    // creates a time and gets it ready to start counting
+    public abstract class CountingUpTimer extends CountDownTimer
+    {
+        private static final long MILISECONDS = 1000;
+
+        private final long duration;
+
+        protected CountingUpTimer(long msDuration)
+        {
+            super(msDuration, MILISECONDS);
+            this.duration = msDuration;
+        }
+
+        public abstract void onTick(int sec);
+
+        // callback fired on regular interval
+        @Override
+        public void onTick(long millisUntilFinished)
+        {
+            int sec = (int) ((duration - millisUntilFinished) / 1000);
+            onTick(sec);
+        }
+        // callback fired when the time is up
+        @Override
+        public void onFinish()
+        {
+            onTick(duration / 1000);
+        }
     }
 }
